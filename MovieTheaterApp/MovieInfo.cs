@@ -6,14 +6,34 @@ using System.Threading.Tasks;
 
 namespace MovieTheaterApp
 {
-    class MovieInfo
+    public enum Showtimings
     {
+        MorningShow_10am,
+        AfterNoonshow_1pm,
+        EveningShow_4pm,
+        NightShow_7pm,
+        Midnightshow_9pm
+    }
+    public class MovieInfo
+    {
+        
         #region Properites
-        public int ScreenId { get; private set; }
-        public string MovieName { get; private set; }
-        public float showTimings { get;private set; }
-        public int Tickets { get; set; }
+        public string MovieName { get; set; }
+        public string MovieLanguage { get;private set; }
+        public string Rating { get; private set; }
+        public double RunningLength{ get; set; }
         #endregion
+        public MovieInfo()
+        {
+
+        }
+        public MovieInfo(string name,string language,string rating,double runninglength)
+        {
+            MovieName = name;
+            MovieLanguage = language;
+            Rating = rating;
+            RunningLength = runninglength;
+        }
 
         public decimal BuyingTickets(int tickets)
         {

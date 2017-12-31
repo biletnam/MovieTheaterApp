@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MovieTheaterApp
 {
-    class Account
+    public class Account
     {
         private static int LastUserId = 0;
        
@@ -19,6 +19,7 @@ namespace MovieTheaterApp
         public int UserId { get; private set; }
         public string UserName { get; set; }
         public string EmailAddress { get; set; }
+        public string Password { get; set; }
 #endregion
 
     }
